@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>707</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>R2PG-GUI</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="title">
+       <string>Input</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <widget class="QLabel" name="inputPathLabel">
+         <property name="text">
+          <string>Input Path</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="inputPathInput"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="tifCheckBox">
+         <property name="text">
+          <string>Tif</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="recursiveSearchCheckBox">
+         <property name="text">
+          <string>Recursive search</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="imgChecKBox">
+         <property name="text">
+          <string>Img</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="title">
+       <string>Optional parameters</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="addFIlenameToColumnNameCheckBox">
+         <property name="text">
+          <string>Filename column name (n)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="filenameColumnNameInput"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="specifyTablespaceCheckBox">
+         <property name="text">
+          <string>Specify tablespace (T)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="skipNoDataChecksBox">
+         <property name="text">
+          <string>Skip nodata checks (k)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="columnNameCheckBox">
+         <property name="text">
+          <string>Column name (f)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="addFilenameToColumnCheckBox">
+         <property name="text">
+          <string>Add filename to column (F)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="vacuumAnalyzeCheckBox">
+         <property name="text">
+          <string>Vacuum analyze (M)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="createGISTIndexCheckbox">
+         <property name="text">
+          <string>Create GiST index (I)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="columnNameInput"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="wrapPgIDinQuotesCheckBox">
+         <property name="text">
+          <string>Wrap PG IDs in quotes (q)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QCheckBox" name="specifyTablespaceForIndexCheckBox">
+         <property name="text">
+          <string>Specify tablespace for new index (X)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Creation Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="2" column="0">
+           <widget class="QRadioButton" name="recreateTableRB">
+            <property name="text">
+             <string>Recreate table (d)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QRadioButton" name="createTableOnlyRB">
+            <property name="text">
+             <string>Only create table (p)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="appendToNewTableRB">
+            <property name="text">
+             <string>Append to table (a)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QRadioButton" name="createNewTableRB">
+            <property name="text">
+             <string>Create new table (c)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Constaint Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="disableMaxExtentConstaintCheckBox">
+            <property name="text">
+             <string>Disable max extent constraint (x)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="applyConstaintsCheckBox">
+            <property name="text">
+             <string>Apply constraints (C)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="setConstraintsBlockingCheckBox">
+            <property name="text">
+             <string>Set constaints for regular blocking (r)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Raster Processing Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="OOBRasterCheckBox">
+            <property name="text">
+             <string>Register as out-of-db raster (R)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="createOverviewsCheckBox">
+            <property name="text">
+             <string>Create overviews (l)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="overviewInput"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="extractBandCheckBox">
+            <property name="text">
+             <string>Extract band (b)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="setSRIDCheckBox">
+            <property name="text">
+             <string>Set SRID (s)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="tileSizeCheckBox">
+            <property name="text">
+             <string>Set tile size (t)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="tileSizeInput"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="extractBandInput"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="padTilesCheckBox">
+            <property name="text">
+             <string>Pad right &amp; bottom tiles (P)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="SRIDInput"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="setNoDataCheckBox">
+            <property name="text">
+             <string>Set NODATA value (N)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="noDataValueInput"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
